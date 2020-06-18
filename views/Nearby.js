@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import {Button, View, Text, ScrollView} from 'react-native';
+import {Button, View, Text, ScrollView, PermissionsAndroid} from 'react-native';
 
 
 import RNSimpleCompass from 'react-native-simple-compass';
