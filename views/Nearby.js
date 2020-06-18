@@ -27,7 +27,6 @@ class Nearby extends React.Component {
         const degree_update_rate = 10; // Number of degrees changed before the callback is triggered
         RNSimpleCompass.start(degree_update_rate, degree => {
             this.setState({compass: degree});
-            console.log('You are facing', this.state.compass);
         });
     }
 
