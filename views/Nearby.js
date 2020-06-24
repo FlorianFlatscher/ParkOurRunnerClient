@@ -4,8 +4,14 @@
  */
 
 import React from 'react';
-import {Button, View, Text, ScrollView, PermissionsAndroid} from 'react-native';
-
+import {
+    Button,
+    View,
+    Text,
+    ScrollView,
+    PermissionsAndroid,
+    ToastAndroid,
+} from 'react-native';
 
 import RNSimpleCompass from 'react-native-simple-compass';
 
@@ -79,7 +85,7 @@ class Nearby extends React.Component {
                         <View>
                             {this.state.parks.map(p => (
                                 <View style={styles.parksNearbyElement}>
-                                    <Arrow facing={this.state.compass} />
+                                    <Arrow facing={(p.bearing * (360/(2*Math.PI)))- this.state.compass} />
                                     <Text>
                                         {`${Math.round(p.distance)}m ${p.name}`}
                                     </Text>
